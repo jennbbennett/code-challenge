@@ -28,3 +28,9 @@ jasmine
 ```
 
 from the root directory.
+
+To print the matrix in the console, simply type:
+
+ ```bash
+ node spiralMatrix.js
+ ```

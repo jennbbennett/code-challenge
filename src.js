@@ -20,8 +20,8 @@ module.exports = {
             num = num * (-1);
         }
         ;
-        var size = dimensionCalc(num);
-        var grid = initializeGrid(size);
+        var size = this.dimensionCalc(num);
+        var grid = this.initializeGrid(size);
         var x = Math.floor((size - 1) / 2);
         var y = x;
         var xMin = x;
