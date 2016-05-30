@@ -29,7 +29,7 @@ jasmine
 
 from the root directory.
 
-To print the matrix in the console with num set to 24, simply type:
+To print the matrix in the console with the integer set to 24, simply type:
 
  ```bash
  node spiralMatrix.js
