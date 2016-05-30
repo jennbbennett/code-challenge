@@ -8,13 +8,18 @@ module.exports = {
         for (var i = 0; i < size; i++) {
             var innerArray = [];
             for (var j = 0; j < size; j++) {
-                innerArray[j] = '-';
+                innerArray[j] = ' ';
             }
             grid[i] = innerArray;
         }
         return grid;
     },
     populateGrid: function (num) {
+        if (num < 0) {
+            var isNegative = true;
+            num = num * (-1);
+        }
+        ;
         var size = dimensionCalc(num);
         var grid = initializeGrid(size);
         var x = Math.floor((size - 1) / 2);
@@ -25,8 +30,12 @@ module.exports = {
         var yMax = y;
         var direction = "right";
         for (var counter = 0; counter <= num; counter++) {
-            grid[y][x] = counter;
-            //printGrid(grid);
+            if (isNegative) {
+                grid[y][x] = counter * (-1);
+            } else {
+                grid[y][x] = counter;
+            }
+
             switch (direction) {
                 case "right":
                     if (x < xMax) {
